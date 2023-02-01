@@ -18,7 +18,6 @@ for(const episode of episodeList){
 
   const episodeNumber = episode.number;
   
-
   const codeDiv = document.createElement("div");
  
 if (episodeNumber < 10) {
@@ -39,25 +38,22 @@ if (episodeNumber < 10) {
   episodeSummaryDiv.innerHTML = episodeSummaryText;
   rootElem.appendChild(episodeSummaryDiv);
 }
- const bodyElement = document.getElementsByTagName("body");
- const footerElement = document.createElement("footer");
- const pElement  = document.createElement("P")
- pElement.textContent = "The data has (originally) come from TVMaze.com";
- footerElement.appendChild(pElement);
- bodyElement.appendChild(footerElement);
+
 }
 
 
 window.onload = setup;
 
 
+  const footer = document.createElement("footer");
+  const footerText = document.createTextNode("The data has (originally) come from TVMaze.com  https://www.tvmaze.com/shows/82/game-of-thrones");
+  
+  footer.appendChild(footerText);
+  document.body.appendChild(footerText);
 
 
 
-//   const codeDiv = document.createElement("div");
-//   codeDiv.textContent = `S0${episodeSeasonNumber}E0${episodeNumber}`;
-//   rootElem.appendChild(codeDiv);
 
-// You should combine season number and episode number into an episode code:
-// Each part should be zero-padded to two digits.
-// Example: S02E07 would be the code for the 7th episode of the 2nd season. S2E7 would be incorrect.
+
+
+
