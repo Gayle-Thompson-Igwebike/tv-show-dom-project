@@ -6,7 +6,7 @@ const allEpisodes = getAllEpisodes();
 function setup() {
   makePageForEpisodes(allEpisodes);
   episodeSelector(allEpisodes);
-  searchItem();
+  searchItem(allEpisodes);
 }
 
 //LEVEL 100 START//
@@ -60,7 +60,7 @@ function makePageForEpisodes() {
 function searchItem() {
   const allEpisodes = getAllEpisodes();
   const liveSearch = document.getElementById("live-search");
-  liveSearch.addEventListener("keyup", (event) => {
+  liveSearch.addEventListener("keyup",(event) => {
     console.log(event);
     const keyValues = event.target.value.toLowerCase();
     const episodeFilter = allEpisodes.filter((searchedEpisodes) => {
@@ -73,7 +73,6 @@ function searchItem() {
   });
 }
 
-
 //LEVEL 300 START//
 //Start a function for selecting episodes//
 function episodeSelector() {
@@ -85,18 +84,20 @@ function episodeSelector() {
     const episodeSeason = episode.season;
     const episodeNumber = episode.number;
     const codeDiv = `S${String(episodeSeason).padStart(2, "0")}E${String(
-    episodeNumber).padStart(2, "0")}`;
+      episodeNumber
+    ).padStart(2, "0")}`;
     option.innerText = `${codeDiv} - ${episode.name}`;
-}
-    //Add eventlistener//
-    episodeSelector.addEventListener("change", (event) => {
+  }
+  //Add eventlistener//
+  episodeSelector.addEventListener("change", (event) => {
     const selectAllEpisodes = event.target.value;
     const allEpisodes = getAllEpisodes();
-    const showAll = allEpisodes.find(element => element.name.includes(selectAllEpisodes))
+    const showAll = allEpisodes.find((element) =>
+      element.name.includes(selectAllEpisodes)
+    );
     makePageForEpisodes(showAll);
     console.log(showAll);
-  })
-  
+  });
 }
 
 window.onload = setup;
