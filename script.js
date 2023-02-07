@@ -55,7 +55,7 @@ function makePageForEpisodes() {
   }
 }
 
-// Create a div and append all:labe, select, input, button
+// Create a div and append all:label, select, input, button
 // let headingTags = document.getElementsByClassName("headers");
 
 

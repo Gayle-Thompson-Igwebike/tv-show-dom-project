@@ -16,8 +16,24 @@ body{
 
 #episodes-selector{
   border-radius: 20px;
-    height: 30px;
-    width: 20rem;
+  height: 30px;
+  width: 20rem;
+    
+}
+
+#live-search{
+  border-radius: 20px;
+  height: 30px;
+  width: 12rem;
+  text-align: center;
+}
+
+button{
+  border-radius: 10px;
+  height: 30px;
+  width: 4rem;
+  text-align: center;
+  background-color: rgb(186, 247, 186);
 }
 
 #root {
@@ -48,8 +64,10 @@ section p {
 
 }
 
-section  div #all-Episodes{
-  background-color: blueviolet;
+ #all-Episodes{
+  background-color: rgb(244, 109, 174);
+  border: 3px solid black;
+  border-radius: 12px;
 }
 
 
