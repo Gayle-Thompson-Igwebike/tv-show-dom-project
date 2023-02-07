@@ -60,7 +60,7 @@ function makePageForEpisodes() {
 function searchItem() {
   const allEpisodes = getAllEpisodes();
   const liveSearch = document.getElementById("live-search");
-  liveSearch.addEventListener("keyup",(event) => {
+  liveSearch.addEventListener("keyup", (event) => {
     console.log(event);
     const keyValues = event.target.value.toLowerCase();
     const episodeFilter = allEpisodes.filter((searchedEpisodes) => {
