@@ -4,11 +4,24 @@
 const allEpisodes = getAllEpisodes();
 const rootElem = document.getElementById("root");
 
-function setup() {
-  makePageForEpisodes(allEpisodes);
-  episodeSelector(allEpisodes);
-  searchItem();
-}
+//LEVEL 350 ADDING FETCH FUNCTION FOR THE API//
+async function tvShowFetch() {
+  try {
+    const result = await fetch("https://api.tvmaze.com/shows/82/episodes");
+    const fetchedData = await result.json();
+    makePageForEpisodes(fetchedData);
+    episodeSelector(fetchedData);
+    searchItem(fetchedData);
+  } catch (error) {
+      console.log(error);
+    }
+  }
+
+// function setup() {
+//   makePageForEpisodes(allEpisodes);
+//   episodeSelector(allEpisodes);
+//   searchItem();
+// }
 
 //LEVEL 100 START//
 function makePageForEpisodes(episodes) {
@@ -58,7 +71,6 @@ function makePageForEpisodes(episodes) {
 // Create a div and append all:label, select, input, button
 // let headingTags = document.getElementsByClassName("headers");
 
-
 //LEVEL 200 START//
 //Start a function for searching for episodes//
 function searchItem() {
@@ -72,11 +84,10 @@ function searchItem() {
         searchedEpisodes.name.toLowerCase().includes(keyValues) ||
         searchedEpisodes.summary.toLowerCase().includes(keyValues)
       );
-    }); 
+    });
     makePageForEpisodes(episodeFilter);
   });
 }
-
 
 // //LEVEL 300 START//
 function episodeSelector(episodeList) {
@@ -103,8 +114,8 @@ function episodeSelector(episodeList) {
       makePageForEpisodes(episodeFilter);
     }
   });
-} window.onload = setup;
-
+}
+window.onload = tvShowFetch;
 
 //START LEVEL 350//
 //CREATE AN ALL EPISODE OPTION THAT RETURNS ALL EPISODES TO THE SCREEN.//
