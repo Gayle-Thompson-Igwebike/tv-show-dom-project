@@ -11,13 +11,13 @@ function setup() {
 }
 
 //LEVEL 100 START//
-function makePageForEpisodes() {
+function makePageForEpisodes(episodes) {
   rootElem.innerHTML = "";
   const allEpisodesDisplay = document.getElementById("all-Episodes");
-  allEpisodesDisplay.textContent = `Got ${allEpisodes.length} episode(s)`;
+  allEpisodesDisplay.textContent = `Got ${episodes.length} episode(s)`;
 
   //Adding a for loop to loop through all episodes//
-  for (const episode of allEpisodes) {
+  for (const episode of episodes) {
     const section = document.createElement("section");
     rootElem.appendChild(section);
 
@@ -72,10 +72,11 @@ function searchItem() {
         searchedEpisodes.name.toLowerCase().includes(keyValues) ||
         searchedEpisodes.summary.toLowerCase().includes(keyValues)
       );
-    });
+    }); 
     makePageForEpisodes(episodeFilter);
   });
 }
+
 
 // //LEVEL 300 START//
 function episodeSelector(episodeList) {
@@ -88,6 +89,7 @@ function episodeSelector(episodeList) {
     )}E${String(episode.number).padStart(2, "0")} ${episode.name}`;
     episodSelect.appendChild(episodeOption);
   }
+  //adding event listener//
   episodSelect.addEventListener("change", (event) => {
     const keyValues = event.target.value;
     const myTitle = keyValues.slice(7);
@@ -101,41 +103,8 @@ function episodeSelector(episodeList) {
       makePageForEpisodes(episodeFilter);
     }
   });
-}
+} window.onload = setup;
 
 
-
-
-
-
-
-// //Start a function for selecting episodes//
-// function episodeSelector() {
-//   const episodeSelector = document.getElementById("episodes-selector");
-//   for (let episode of getAllEpisodes()) {
-//     const option = document.createElement("option");
-//     episodeSelector.appendChild(option);
-//     option.value = episode.name;
-//     const episodeSeason = episode.season;
-//     const episodeNumber = episode.number;
-//     const codeDiv = `S${String(episodeSeason).padStart(2, "0")}E${String(
-//       episodeNumber
-//     ).padStart(2, "0")}`;
-//     option.innerText = `${codeDiv} - ${episode.name}`;
-//   }
-//   //Add eventlistener//
-//   episodeSelector.addEventListener("change", (event) => {
-//     const selectAllEpisodes = event.target.value;
-//     // const allEpisodes = getAllEpisodes();
-//     const showAll = allEpisodes.find((element) =>
-//       element.name.includes(selectAllEpisodes)
-//     );
-//     makePageForEpisodes(showAll);
-//     console.log(showAll);  
-//   });
-
-// }
-
-window.onload = setup;
-
-
+//START LEVEL 350//
+//CREATE AN ALL EPISODE OPTION THAT RETURNS ALL EPISODES TO THE SCREEN.//
