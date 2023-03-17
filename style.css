@@ -7,8 +7,8 @@
 }
 
 #root{
-  border: 6px solid greenyellow;
-  background-color: white;
+  border: 6px solid rgb(90, 4, 103);
+  background-color: rgb(243, 193, 228);
   margin-top: 4rem;
     color: rgb(117, 3, 90);
     /* display: grid;
@@ -22,7 +22,7 @@
 
 body{
   margin-top: 4rem;
-  background-color: rgb(196, 18, 18);
+  background-color: rgb(154, 7, 86);
 }
 
 .title-bar{
@@ -43,7 +43,7 @@ body{
   border-radius: 20px;
   height: 30px;
   width: 20rem;
-  border: 3px solid rgb(117, 3, 90);
+  border: 3px solid rgb(146, 8, 114);
   
 }
 
@@ -84,7 +84,7 @@ section{
   gap: 1rem;
   width: 400px;
   height: 500px;
-  background-color: rgb(237, 173, 100);
+  background-color: rgb(243, 205, 237);
   padding:1rem ;
   box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
@@ -105,8 +105,8 @@ section p::selection{
 }
 
  #all-Episodes{
-  background-color: rgb(142, 4, 144);
-  color: aliceblue;
+  background-color: rgb(238, 233, 236);
+  color: black;
   border: 3px solid black;
   border-radius: 12px;
 }
