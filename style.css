@@ -3,9 +3,34 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* background-color: rgb(246, 215, 243); */
 }
+
+#root{
+  border: 6px solid greenyellow;
+  background-color: white;
+  margin-top: 4rem;
+    color: rgb(117, 3, 90);
+    /* display: grid;
+    grid-template-columns: auto auto auto; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    
+}
+
 body{
   margin-top: 4rem;
+  background-color: rgb(196, 18, 18);
+}
+
+.title-bar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 .headers{
@@ -14,12 +39,20 @@ body{
   gap: 1.5rem;
 }
 
+#show-selector{
+  border-radius: 20px;
+  height: 30px;
+  width: 20rem;
+  border: 3px solid rgb(117, 3, 90);
+  
+}
+
 #episodes-selector{
   border-radius: 20px;
   height: 30px;
   width: 20rem;
-  border: 3px solid green;
-    
+  border: 3px solid rgb(117, 3, 90);
+  
 }
 
 #live-search{
@@ -27,22 +60,23 @@ body{
   height: 30px;
   width: 12rem;
   text-align: center;
-  border: 3px solid green;
+  border: 3px solid rgb(117, 3, 90);
 }
 
-#root {
-  margin-top: 4rem;
-  color: rgb(36, 2, 30);
-  /* display: grid;
-  grid-template-columns: auto auto auto; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  background-color: rgb(255, 255, 255);
+.titles{
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.pictures{
+  border-radius: 10px;
+  cursor: pointer;
+}
+.pictures:hover{
+  transform: scale(1.2);
 }
 section{
-  border: 3px solid rgb(3, 132, 3);
+  border: 4px solid rgb(117, 3, 90);
+  border-radius: 10px;
   margin: 3px 4px 4px 4px;
   display: flex;
   flex-direction: column;
@@ -50,16 +84,28 @@ section{
   gap: 1rem;
   width: 400px;
   height: 500px;
+  background-color: rgb(237, 173, 100);
+  padding:1rem ;
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
 
 section p {
   text-align: justify;
-  font-size: 18px;
-
+  font-size: 15px;
+  color: rgb(128, 5, 46);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 2rem;
+  overflow: scroll;
+  width: 350px;
+  height: 220px;
+  
+}
+section p::selection{
+  background-color: rgb(233, 62, 144);
 }
 
  #all-Episodes{
-  background-color: rgb(6, 96, 24);
+  background-color: rgb(142, 4, 144);
   color: aliceblue;
   border: 3px solid black;
   border-radius: 12px;

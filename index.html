@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,11 +9,22 @@
   </head>
 
   <body>
-   
+    <div class="title-bar">
+    <h3>Welcome to:</h3> 
+    <br>
+    <h1>WATCH-NOW-TV!</h1>
+    <br> <br>
+    <h3>Your home for brand new exciting tv shows...!</h3>
+    </div>
+    <br> <br>
     <div class="headers">
 
+      <select id="show-selector">
+        <option id="show-selector"selected>Select A Show</option>
+      </select>
+
       
-    <label for="episode-selector">Select Episode:</label>
+    <!-- <label for="episode-selector">Select Episode:</label> -->
       <select id="episodes-selector">
         <option id="show-all-episodes" selected>Show All Episodes</option>
       </select>
@@ -31,8 +42,11 @@
     <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
     <script src="episodes.js"></script>
 
+    <script src="shows.js"></script>
+
     <!-- Loads YOUR javascript code -->
     <script src="script.js"></script>
+   
 
     <footer>
       <p>The data on this page has been populated from <a href="https://www.tvmaze.com/"> TVMaze.com </a> Please visit TV-MAZE for more information.</p>
